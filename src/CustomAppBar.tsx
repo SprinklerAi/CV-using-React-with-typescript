@@ -8,7 +8,7 @@ const CustomAppBar = () => {
         <IconButton edge="start">
           <MenuIcon />
         </IconButton>
-        <Typography variant="h6">My App</Typography>
+        <Typography variant="h6">Portfolio</Typography>
         
       </Toolbar>
     </AppBar>

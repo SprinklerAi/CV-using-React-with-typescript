@@ -1,10 +1,6 @@
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import CardActionArea from '@mui/material/CardActionArea';
+import { Card, CardContent, CardMedia, CardActionArea, Typography } from '@mui/material'
 
-type CustomCardProps = {
+export type CustomCardProps = {
   src: string
   header: string
   body: string
@@ -12,14 +8,14 @@ type CustomCardProps = {
 
 const CustomCard = ({ src, header, body }: CustomCardProps) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+    <Card sx={{ width: 300, height: 260, display: 'flex', flexDirection: 'column', bgcolor: 'secondary.main' }} elevation={24}>
+      <CardActionArea sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
         <CardMedia
           component="img"
-          height="140"
           image={src}
+          sx={{ flexGrow: 1, width: '100%', height: '60%', objectFit: 'cover' , overflow: 'hidden' }}
         />
-        <CardContent>
+        <CardContent sx={{ maxHeight: 200, overflow: 'hidden' }}>
           <Typography gutterBottom variant="h5" component="div">
             {header}
           </Typography>
@@ -29,7 +25,7 @@ const CustomCard = ({ src, header, body }: CustomCardProps) => {
         </CardContent>
       </CardActionArea>
     </Card>
-  );
+  )
 }
 
-export default CustomCard;
+export default CustomCard
