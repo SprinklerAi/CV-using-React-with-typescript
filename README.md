@@ -27,3 +27,13 @@ What's next:
 
 - Second page about life events like for work, education etc instead
 - Navigation to that page. 
+
+Third wave:
+
+- Timeline cards now pop up relevant info panel.
+- More streamlined card - description conveyor belt.
+
+
+What's next:
+- Info panels arent deleted upn next click so they actually stack infinitely if clicked enough, going to fix that.
+Done with basic portfolio for now, next CV.
