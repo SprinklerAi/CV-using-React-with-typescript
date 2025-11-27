@@ -1,5 +1,4 @@
 import { Card, CardContent, CardMedia, CardActionArea, Typography } from '@mui/material'
-import Box from '@mui/material/Box'
 import './i18n'
 
 export type CustomCardProps = {
