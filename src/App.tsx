@@ -31,7 +31,7 @@ function App() {
                   </Typography>
                   <CardMedia
                     component="img"
-                    image="/images/ProfilePic.png"
+                    image="images/ProfilePic.png"
                     sx={{ width: 150, objectFit: 'cover' }}
                   />
                 </Box>

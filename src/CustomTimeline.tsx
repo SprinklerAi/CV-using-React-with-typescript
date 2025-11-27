@@ -44,7 +44,7 @@ const CustomTimeline = () => {
       >
         <Grid size={{ xs: 'auto', md: 'auto', xl: 12 }}>
           <CustomCard
-            src="/images/KunnatApp.png"
+            src="images/KunnatApp.png"
             header={t("card.KunnatApp.header")}
             body={t("card.KunnatApp.body")}
           />
@@ -59,7 +59,7 @@ const CustomTimeline = () => {
 
         <Grid size={{ xs: 'auto', md: 'auto', xl: 6}}>
           <CustomCard
-            src="/images/DistributedSystems.png"
+            src="images/DistributedSystems.png"
             header={t("card.DistributedSystems.header")}
             body={t("card.DistributedSystems.body")}
           />
@@ -68,7 +68,7 @@ const CustomTimeline = () => {
         
         <Grid size={{ xs: 'auto', md: 'auto', xl: 6}}>
           <CustomCard
-            src="/images/SQL.png"
+            src="images/SQL.png"
             header={t("card.DatabaseManagement.header")}
             body={t("card.DatabaseManagement.body")}
           />
@@ -90,7 +90,7 @@ const CustomTimeline = () => {
 
         <Grid size={{ xs: 'auto', md: 'auto', xl: 6}}>
           <CustomCard
-            src="/images/WeatherApp.png"
+            src="images/WeatherApp.png"
             header="This project"
             body="This is the latest large project of mine that aims to showcase and pave my skills in React."
           />
