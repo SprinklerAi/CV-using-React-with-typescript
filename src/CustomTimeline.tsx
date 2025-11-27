@@ -2,15 +2,16 @@ import { Card, Box, Grid } from '@mui/material'
 import CustomCard from './CustomCard'
 import { useTranslation } from 'react-i18next'
 import { useTheme, useMediaQuery } from '@mui/material'
-import './i18n'  // or wherever your i18n.ts file is
-import i18next from 'i18next'
+import './i18n'
 
-const CustomTimeline = () => {
+type CustomTimelineProps = {
+  onCardClick: (header: string) => void
+}
+
+const CustomTimeline = ({ onCardClick }: CustomTimelineProps) => {
   const { t } = useTranslation()
   const theme = useTheme()
   const isXL = useMediaQuery(theme.breakpoints.up('xl'))
-  console.log(i18next.getResource('en', 'translation', 'card.DistributedSystems.header'))
-
 
   return (
     <Box
@@ -39,62 +40,73 @@ const CustomTimeline = () => {
           overflowX: { xs: 'auto', md: 'auto', xl: 'visible' },
           scrollbarWidth: 'thin',
           scrollbarColor: 'brown transparent',
-          width: { xs: 'auto', md: 'auto', xl: '100%' }
+          width: { xs: 'auto', md: 'auto', xl: '100%' },
+          mb: 2,
         }}
       >
         <Grid size={{ xs: 'auto', md: 'auto', xl: 12 }}>
           <CustomCard
             src="images/KunnatApp.png"
-            header={t("card.KunnatApp.header")}
+            Header={t("card.KunnatApp.header")}
             body={t("card.KunnatApp.body")}
+            onClick={() => onCardClick("KunnatApp")}
           />
         </Grid>
 
         {isXL && (
-          <Grid size={{ xs: 'auto', md: 'auto', xl: 6}}>
-          <Card sx={{ width: 300, height: 260, display: 'flex', flexDirection: 'column', visibility: 'hidden', opacity: 0, pointerEvents: 'none' }} >
-          </Card>
-          </Grid >
+          <Grid size={{ xs: 'auto', md: 'auto', xl: 6 }}>
+            <Card sx={{ width: 300, height: 200, display: 'flex', flexDirection: 'column', visibility: 'hidden', opacity: 0, pointerEvents: 'none' }} />
+          </Grid>
         )}
 
-        <Grid size={{ xs: 'auto', md: 'auto', xl: 6}}>
+        <Grid size={{ xs: 'auto', md: 'auto', xl: 6 }}>
           <CustomCard
             src="images/DistributedSystems.png"
-            header={t("card.DistributedSystems.header")}
+            Header={t("card.DistributedSystems.header")}
             body={t("card.DistributedSystems.body")}
+            onClick={() => onCardClick("DistributedSystems")}
           />
-        </Grid >
+        </Grid>
 
-        
-        <Grid size={{ xs: 'auto', md: 'auto', xl: 6}}>
+        <Grid size={{ xs: 'auto', md: 'auto', xl: 6 }}>
           <CustomCard
             src="images/SQL.png"
-            header={t("card.DatabaseManagement.header")}
+            Header={t("card.DatabaseManagement.header")}
             body={t("card.DatabaseManagement.body")}
+            onClick={() => onCardClick("DatabaseManagement")}
           />
         </Grid>
 
         {isXL && (
-          <Grid size={{ xs: 'auto', md: 'auto', xl: 6}}>
-          <Card sx={{ width: 300, height: 260, display: 'flex', flexDirection: 'column', visibility: 'hidden', opacity: 0, pointerEvents: 'none' }} >
-          </Card>
-          </Grid >
+          <Grid size={{ xs: 'auto', md: 'auto', xl: 6 }}>
+            <Card sx={{ width: 300, height: 200, display: 'flex', flexDirection: 'column', visibility: 'hidden', opacity: 0, pointerEvents: 'none' }} />
+          </Grid>
         )}
 
         {isXL && (
-          <Grid size={{ xs: 'auto', md: 'auto', xl: 6}}>
-          <Card sx={{ width: 300, height: 260, display: 'flex', flexDirection: 'column', visibility: 'hidden', opacity: 0, pointerEvents: 'none' }} >
-          </Card>
-          </Grid >
+          <Grid size={{ xs: 'auto', md: 'auto', xl: 6 }}>
+            <Card sx={{ width: 300, height: 200, display: 'flex', flexDirection: 'column', visibility: 'hidden', opacity: 0, pointerEvents: 'none' }} />
+          </Grid>
         )}
 
-        <Grid size={{ xs: 'auto', md: 'auto', xl: 6}}>
+        <Grid size={{ xs: 'auto', md: 'auto', xl: 6 }}>
           <CustomCard
             src="images/WeatherApp.png"
-            header="This project"
-            body="This is the latest large project of mine that aims to showcase and pave my skills in React."
+            Header={t("card.WeatherApp.header")}
+            body={t("card.WeatherApp.body")}
+            onClick={() => onCardClick("WeatherApp")}
           />
         </Grid>
+
+        <Grid size={{ xs: 'auto', md: 'auto', xl: 6 }}>
+          <CustomCard
+            src="images/Current.png"
+            Header={t("card.CurrentProject.header")}
+            body={t("card.CurrentProject.body")}
+            onClick={() => onCardClick("CurrentProject")}
+          />
+        </Grid>
+
       </Grid>
     </Box>
   )

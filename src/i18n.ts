@@ -9,45 +9,33 @@ const i18n = (() => {
           card: {
             KunnatApp: {
               header: "Kunnat App",
-              body: "An Android application about cities."
+              body: "An Android application about municipalities of Finland.",
+              description: "Kunnat is an Android application that provides information about Finnish municipalities using the StatFi API. It offers details such as population, area, and other relevant data for each municipality. It also integrates Google Maps. It has search history functionality, dark/light mode, english and finnish localisation."
+
             },
             WeatherApp: {
-              header: "Weather App",
-              body: "Weather forecast website."
+              header: "Weather Forecast Website",
+              body: "Weather forecast website.",
+              description: "Website is built using plain JavaScript and HTML/CSS. It has rain map imported from other libraries. It is little rought around the edges. uses OpenWeather API to fetch weather data based on searched location or geolocation."
             },
             DistributedSystems: {
               header: "Distributed Systems",
-              body: "CLI chat service that uses JWT."
+              body: "CLI chat service that uses JWT.",
+              description: "A modular microservice-based system built with Python, gRPC, and REST. It supports user registration, authentication with JWT, real-time messaging, and file upload/download. The system demonstrates distributed system principles including stateless communication, interoperability, and fault isolation using Docker containers and MongoDB as a shared data store."
             },
             DatabaseManagement: {
               header: "Database Management",
-              body: "Database with views about movies."
+              body: "Database with views about movies.",
+              description: "Database with views about movies. Dataset is made up of randomly selected movies, and views are created to give user cohesive information based on that data."
+            },
+            CurrentProject: {
+              header: "React portfolio",
+              body: "Showcase of my abioities in React and Typescript",
+              description: "I started learning React on par with TypeScript, and this website is the result of that ongoign process. The website is built using React and TypeScript, with Material-UI for styling and layout. It features a responsive design, interactive components, and showcases various projects I've worked on, demonstrating my skills in front-end development. I plan to expand this website further throughout my carrier."
             }
           }
         }
       },
-      fi: {
-        translation: {
-          card: {
-            KunnatApp: {
-              header: "Kunnat‑sovellus",
-              body: "Android‑sovellus, joka näyttää tietoa Suomen kunnista StatFi‑rajapinnan kautta."
-            },
-            WeatherApp: {
-              header: "Sääsovellus",
-              body: "Sivusto, joka näyttää säätiedot haetun paikkakunnan tai geopaikan perusteella. Käyttää OpenWeather‑rajapintaa."
-            },
-            DistributedSystems: {
-              header: "Distribuoidut järjestelmät",
-              body: "CLI‑chatpalvelu, joka käyttää JSON‑tunnistautumista."
-            },
-            DatabaseManagement: {
-              header: "Tietokannan hallinta",
-              body: "Rakensin pienen tietokannan, joka sisälsi elokuva‑dataa kykyjeni esittelyyn. Sisälsi myös näkymiä."
-            }
-          }
-        }
-      }
     },
     lng: "en",
     fallbackLng: "en",
