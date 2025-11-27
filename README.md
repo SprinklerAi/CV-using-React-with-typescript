@@ -1,75 +1,18 @@
-# React + TypeScript + Vite
+This is meant to be demonstration of my past and present skills and a project-based learning for me. Going to be updates as I improve.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+NOVEMBER 27th 2025:
 
-Currently, two official plugins are available:
+I have learned:
+- Read Material UI guidelines. https://m2.material.io/design
+- Read Majority of Material UI component and customisation documentation. https://mui.com/material-ui
+- Watched "React JS 19 Full Course 2025" by Jacvascript Mastery (2h). https://youtu.be/dCLhUialKPQ?si=jh8Ut_FrKbZlspPF
+- Watched "TypeScript in React" by ByteGrad (1h). https://youtu.be/TPACABQTHvM?si=hTGVuH_uJTyfdtso
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+First commit on 25.11.2025:
+Added a placeholder appbar, applied custom palette to theme, created grid container that has draft of timeline cards for events (either life events or my projects) and next to it description.
 
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Implemented new features:
+- AppBar
+- Grid
+  - Timeline grid is inside bigger grid that holds timeline and description. It transforms into horizontal scrollable in xs and md size, and is vertical in xl.
+ 
